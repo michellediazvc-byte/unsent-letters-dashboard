@@ -1106,24 +1106,24 @@ function AnalyticsTab({
             <span style={{ fontSize: 11, fontFamily: font, padding: "3px 10px", borderRadius: 10, background: C.greenFaint, color: C.green, fontWeight: 600 }}>✓ real data loaded</span>
           )}
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, alignItems: "start" }}>
           <div>
             <div style={{ fontSize: 12, fontFamily: font, fontWeight: 600, color: C.plum, marginBottom: 6 }}>Subscribers</div>
-            <div style={{ fontSize: 11, fontFamily: font, color: C.gray, marginBottom: 8, lineHeight: 1.5 }}>
+            <div style={{ fontSize: 11, fontFamily: font, color: C.gray, marginBottom: 8, lineHeight: 1.5, height: "2.4em" }}>
               <strong>Dashboard → Settings → Subscribers → Export</strong>
             </div>
             <DropZone label="subscribers CSV" accept=".csv" onFile={f => handleCSVFile(f, "subs")} loaded={isRealSubData} onClear={onClearSubs} />
           </div>
           <div>
             <div style={{ fontSize: 12, fontFamily: font, fontWeight: 600, color: C.plum, marginBottom: 6 }}>Followers</div>
-            <div style={{ fontSize: 11, fontFamily: font, color: C.gray, marginBottom: 8, lineHeight: 1.5 }}>
+            <div style={{ fontSize: 11, fontFamily: font, color: C.gray, marginBottom: 8, lineHeight: 1.5, height: "2.4em" }}>
               <strong>Dashboard → Settings → Followers → Export</strong>
             </div>
             <DropZone label="followers CSV" accept=".csv" onFile={f => handleCSVFile(f, "followers")} loaded={isRealFollowerData} onClear={onClearFollowers} />
           </div>
           <div>
             <div style={{ fontSize: 12, fontFamily: font, fontWeight: 600, color: C.plum, marginBottom: 6 }}>Post analytics</div>
-            <div style={{ fontSize: 11, fontFamily: font, color: C.gray, marginBottom: 8, lineHeight: 1.5 }}>
+            <div style={{ fontSize: 11, fontFamily: font, color: C.gray, marginBottom: 8, lineHeight: 1.5, height: "2.4em" }}>
               Substack doesn't export this.{" "}
               <button onClick={downloadPostTemplate} style={{ background: "none", border: "none", color: C.orange, cursor: "pointer", fontFamily: font, fontSize: 11, padding: 0, textDecoration: "underline" }}>
                 Download template
